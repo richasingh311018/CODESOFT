@@ -1,0 +1,70 @@
+tasks = []  # list to store all tasks
+
+def show_menu():
+    print("\n------ TO-DO LIST MENU ------")
+    print("1. View all tasks")
+    print("2. Add a new task")
+    print("3. Mark a task as done")
+    print("4. Delete a task")
+    print("5. Exit")
+
+def view_tasks():
+    if not tasks:
+        print("\nYour To-do list is empty !")
+    else:
+        print("\nYour To-Do List:")
+        for i, task in enumerate(tasks, 1):
+            print(f"{i}. {task}")
+
+def add_task():
+    new_task = input("Enter the new task: ").strip()
+    if new_task:
+        tasks.append(new_task)
+        print(f"{new_task}' has been added to your list.")
+    else:
+        print("Task cannot be empty.")
+
+def mark_done():
+    view_tasks()
+    if tasks:
+        try:
+            num = int(input("Enter the task number to mark as done: "))
+            if 1 <= num <= len(tasks):
+                done_task = tasks[num - 1]
+                print(f"{done_task}' marked as completed!")
+            else:
+                print("Invalid task number.")
+        except ValueError:
+            print(" Please enter a valid number.")
+
+def delete_task():
+    view_tasks()
+    if tasks:
+        try:
+            num = int(input("Enter the task number to delete: "))
+            if 1 <= num <= len(tasks):
+                removed = tasks.pop(num - 1)
+                print(f"{removed}' deleted from your list.")
+            else:
+                print(" Invalid task number.")
+        except ValueError:
+            print("Please enter a valid number.")
+
+# main program loop
+while True:
+    show_menu()
+    choice = input("Enter your choice (1-5): ")
+
+    if choice == '1':
+        view_tasks()
+    elif choice == '2':
+        add_task()
+    elif choice == '3':
+        mark_done()
+    elif choice == '4':
+        delete_task()
+    elif choice == '5':
+        print("Exiting... Have a productive day!")
+        break
+    else:
+        print("Please choose a valid option (1-5).")
