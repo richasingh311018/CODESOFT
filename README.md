@@ -1,6 +1,18 @@
 Mini Projects Collection (Python)
 
 A small collection of beginner-friendly command-line projects built in **Python**: a **Password Generator**, a **Calculator**, and a **To-Do List**.
+## ✅ To-Do List
+
+A command-line task manager with persistent storage.
+
+**Features**
+- Add, view, complete, and delete tasks
+- Tasks saved to a local `tasks.json` file (persist between runs)
+
+**How to run**
+```bash
+cd todo-list
+python todo_list.py
 ## 🔐 Password Generator
 
 Generates a random password based on user preferences.
@@ -34,16 +46,3 @@ python calculator.py
 ```
 
 ---
-
-## ✅ To-Do List
-
-A command-line task manager with persistent storage.
-
-**Features**
-- Add, view, complete, and delete tasks
-- Tasks saved to a local `tasks.json` file (persist between runs)
-
-**How to run**
-```bash
-cd todo-list
-python todo_list.py
