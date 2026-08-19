@@ -13,22 +13,8 @@ A command-line task manager with persistent storage.
 ```bash
 cd todo-list
 python todo_list.py
-## 🔐 Password Generator
+## ✅ To-Do List
 
-Generates a random password based on user preferences.
-
-**Features**
-- Custom password length
-- Toggle uppercase, lowercase, digits, and symbols
-- Uses Python's built-in `random` and `string` modules
-
-**How to run**
-```bash
-cd password-generator
-python password_generator.py
-```
-
----
 
 ## 🧮 Calculator
 
@@ -43,6 +29,20 @@ A command-line calculator supporting basic arithmetic.
 ```bash
 cd calculator
 python calculator.py
+```
+🔐 Password Generator
+
+Generates a random password based on user preferences.
+
+**Features**
+- Custom password length
+- Toggle uppercase, lowercase, digits, and symbols
+- Uses Python's built-in `random` and `string` modules
+
+**How to run**
+```bash
+cd password-generator
+python password_generator.py
 ```
 
 ---
